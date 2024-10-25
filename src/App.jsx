@@ -4,11 +4,11 @@ import { router } from './components/Routes/Router'
 
 
 const App = () => {
-  console.log({router})
+  
   return (
     <div>
       <Routes>
-         {router?.map((item,index)=>(<Route path={item.path} element={item.element}/>))}
+         {router?.map((item,index)=>(<Route key={index} path={item.path} element={item.element}/>))}
       </Routes>
     </div>
   )
